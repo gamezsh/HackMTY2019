@@ -4,7 +4,6 @@ import { NavbarContainer } from './styled';
 const Navbar = props => {
   return (
     <NavbarContainer>
-      <p> navbar </p>
     </NavbarContainer>
   );
 };
