@@ -54,3 +54,4 @@ htmlcov/
 
 #csv files
 *.csv
+*.csv.gz
