@@ -3,18 +3,18 @@ import json
 from flask import Flask
 from flask_cors import CORS
 from flask import request
+import pandas as pd
+import numpy as np
+import matplotlib.pylab as plt
 
 app = Flask(__name__)
 CORS(app)
 
 @app.route("/train")
 def App():
-  with open('input_data_train.csv', 'r') as csvfile:
-    reader = csv.reader(csvfile)
-    for row in reader:
-      print(row[0])
-      out = "works" #json.dumps([row for row in reader])        
-  return out
+  data = pd.read_csv('input_data_train.csv')
+  print(data.head())
+  return "data"
 
 
 @app.route("/upload", methods=['POST'])
